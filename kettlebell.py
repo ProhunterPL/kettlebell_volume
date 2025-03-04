@@ -35,7 +35,7 @@ def main():
         st.success(f"Całkowita objętość treningowa: {total_volume} kg")
         
         # Tworzenie wykresu
-        fig = px(x=list(range(1, series + 1)), y=series_volumes, labels={'x': 'Seria', 'y': 'Objętość (kg)'},
+        fig = px.bar(x=list(range(1, series + 1)), y=series_volumes, labels={'x': 'Seria', 'y': 'Objętość (kg)'},
                      title="Objętość treningowa dla każdej serii", text=series_volumes)
         fig.update_traces(textposition="outside")
         st.plotly_chart(fig)
